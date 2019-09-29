@@ -6,8 +6,8 @@ void main() {
 
 void performTasks() {
   task1();
-  String task2result = task2();
-  task3(task2result);
+  print(task2());
+  //task3(task2result);
 }
 
 void task1() {
@@ -15,7 +15,7 @@ void task1() {
   print('Task 1 complete');
 }
 
-String task2() {
+Future<String> task2() async{
   Duration threeSeconds = Duration(seconds: 3);
   String result;
   Future.delayed(threeSeconds, () {
